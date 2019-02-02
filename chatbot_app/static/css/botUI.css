@@ -66,4 +66,6 @@
   	z-index: 9;
 }
 
-
+.fa { 
+	font-family: 'FontAwesome' !important; 
+}
