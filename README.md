@@ -15,7 +15,7 @@ A Chatbot to answer College Queries. Students can ask questions related to the C
 ## How to use:
 Clone the project into your local system. Navigate to the project directory and run:
 ```
-$ pyhton3 manage.py runserver
+$ python3 manage.py runserver
 ```
 A server will be started at http://127.0.0.1:8000/ <br>
 You can access it by opening in any browser. 
