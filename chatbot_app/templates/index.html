@@ -26,11 +26,6 @@
         <link href="{% static 'css/AdminLTE.min.css' %}" rel="stylesheet" type="text/css" />
         <link href="{% static 'css/layout.css' %}" rel="stylesheet" type="text/css" />
         <link href="{% static 'css/botUI.css' %}" rel="stylesheet" type="text/css" />
-        <!--css for select box
-        <link href="{% static 'css/bootstrap-select.min.css' %}" rel="stylesheet" type="text/css" />-->
-        <!-- Font awesome css style-->
-        <!-- <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
-        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"> --> 
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <!--Preload assets-->
 	<link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -181,21 +176,10 @@ var w = $(window).width();
 </div>
 <body>
 <!-- ChatBox Begin-->
+<!-- CSS Styling can be found in AdminLTE.min.css and botUI.css -->
 <div>
        <img class="open-button" onclick="openForm()" src="{% static 'images/bot.jpeg' %}"></img>
-
-<!---
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
-
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
-
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div> -->
+{% csrf_token %}
 <div class="box box-primary direct-chat direct-chat-primary form-container chat-popup" id="myForm">
             <div class="box-header with-border">
               <h3 class="box-title">Direct Chat</h3>
@@ -207,7 +191,7 @@ var w = $(window).width();
             <!-- /.box-header -->
             <div class="box-body">
               <!-- Conversations are loaded here -->
-              <div class="direct-chat-messages">
+              <div class="direct-chat-messages" id="conversation">
                 <!-- Message. Default to the left -->
                 <div class="direct-chat-msg">
                   <div class="direct-chat-info clearfix">
@@ -222,30 +206,15 @@ var w = $(window).width();
                   <!-- /.direct-chat-text -->
                 </div>
                 <!-- /.direct-chat-msg -->
-
-                <!-- Message to the right -->
-                <div class="direct-chat-msg right">
-                  <div class="direct-chat-info clearfix">
-                    <span class="direct-chat-name pull-right">Oormila</span>
-                    <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
-                  </div>
-                  <!-- /.direct-chat-info -->
-                  <img class="direct-chat-img" src="{% static 'img/user.svg' %}" alt="Message User Image"><!-- /.direct-chat-img -->
-                  <div class="direct-chat-text">
-                    What are the strems offered in Mtech?
-                  </div>
-                  <!-- /.direct-chat-text -->
-                </div>
-                <!-- /.direct-chat-msg -->
               </div>
               <!--/.direct-chat-messages-->
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
                 <div class="input-group">
-                  <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+                  <input type="text" name="message" placeholder="Type Message ..." class="form-control" id="query">
                       <span class="input-group-btn">
-                        <button onclick="openForm();" class="btn btn-primary btn-flat">Send</button>
+                        <button onclick="getResponse();" class="btn btn-primary btn-flat">Send</button>
                       </span>
                 </div>
             </div>
@@ -255,6 +224,7 @@ var w = $(window).width();
 
 </div>
 <!-- ChatBox End-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
 function openForm() {
   document.getElementById("myForm").style.display = "block";
@@ -262,6 +232,39 @@ function openForm() {
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
+}
+/*
+Function to get reply from API
+Sends the message entered by the user through AJAX and gets a reply to display
+The messages are appended to the HTML DOM dynamically
+*/
+function getResponse(){
+	var query = $("#query").val();
+	if(query.trim()=="") return false;    //Do nothing if trying to getResponse without entering anything
+	var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
+	$('#conversation').append('<div class="direct-chat-msg right"><div class="direct-chat-info clearfix"><span class="direct-chat-name pull-right">Oormila</span><span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span></div><img class="direct-chat-img" src="{% static "img/user.svg" %}" alt="Message User Image"><div class="direct-chat-text">'+query+'</div></div>');  //append user's message
+	var dataObj = {
+            'q' : query,
+            'csrfmiddlewaretoken':csrftoken,
+          };
+	$.ajax({
+          type:"GET",
+          url: "{% url 'get_reply' %}",
+          data: dataObj,
+          dataType: 'json',
+          success: function( data ) {
+            //alert(data);
+            $('#conversation').append('<div class="direct-chat-msg"><div class="direct-chat-info clearfix"><span class="direct-chat-name pull-left">ChatBot</span><span class="direct-chat-timestamp pull-right">23 Jan 2:05 pm</span></div><img class="direct-chat-img" src="{% static "images/bot.jpeg" %}" alt="Message User Image"><div class="direct-chat-text">'+data.reply+'</div></div>');
+            $("#conversation").scrollTop($("#conversation")[0].scrollHeight);    //append chatbot's reply for success
+          },
+          error: function(data){
+          	console.log(data);
+          	$('#conversation').append('<div class="direct-chat-msg"><div class="direct-chat-info clearfix"><span class="direct-chat-name pull-left">ChatBot</span><span class="direct-chat-timestamp pull-right">23 Jan 2:05 pm</span></div><img class="direct-chat-img" src="{% static "images/bot.jpeg" %}" alt="Message User Image"><div class="direct-chat-text">Cannot Connect right now!</div></div>');
+          	$("#conversation").scrollTop($("#conversation")[0].scrollHeight); //append chatbot's reply for failure
+          }
+        });
+        
+        $("#query").val(''); 		//Clear the input field
 }
 </script>
         <header> 
