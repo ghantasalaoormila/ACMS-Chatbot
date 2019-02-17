@@ -10,5 +10,8 @@ def index(request):
 	
 @csrf_exempt
 def get_reply(request):
-	response = {"reply": "Hi"}
-	return JsonResponse(response)
+	query = request.GET['q']
+	response = {"reply": query}
+	if(str(query)=="Hi"):
+		return JsonResponse(response)
+	else: return JsonResponse({"reply": "Failed!"})
