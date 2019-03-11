@@ -182,7 +182,7 @@ var w = $(window).width();
 {% csrf_token %}
 <div class="box box-primary direct-chat direct-chat-primary form-container chat-popup" id="myForm">
             <div class="box-header with-border">
-              <h3 class="box-title">Direct Chat</h3>
+              <h3 class="box-title">Ask me something</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="remove" onclick="closeForm()"><i class="fa fa-times"></i></button>
@@ -191,21 +191,27 @@ var w = $(window).width();
             <!-- /.box-header -->
             <div class="box-body">
               <!-- Conversations are loaded here -->
-              <div class="direct-chat-messages" id="conversation">
+              <div class="direct-chat-messages" id="convBox">
                 <!-- Message. Default to the left -->
+                <div  id="conversation">
                 <div class="direct-chat-msg">
                   <div class="direct-chat-info clearfix">
-                    <span class="direct-chat-name pull-left">ChatBot</span>
-                    <span class="direct-chat-timestamp pull-right">23 Jan 2:05 pm</span>
+                    <span class="direct-chat-name pull-left">Chatty</span>
+                    <span class="direct-chat-timestamp pull-right">{% now "jS F Y H:i" %}</span>
                   </div>
                   <!-- /.direct-chat-info -->
                   <img class="direct-chat-img" src="{% static 'images/bot.jpeg' %}" alt="Message User Image"><!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
-                    Hello! I am a Chatbot. How can I help you?
+                    Hello! I am Chatty, a Chatbot. How can I help you?
                   </div>
                   <!-- /.direct-chat-text -->
                 </div>
                 <!-- /.direct-chat-msg -->
+                </div>
+                <!-- /#conversation -->
+                <div class="loading" id="loading">
+                	<img class="direct-chat-loading" src="/static/img/loading.gif" alt="Message User Image">
+                </div>
               </div>
               <!--/.direct-chat-messages-->
             </div>
@@ -214,7 +220,7 @@ var w = $(window).width();
                 <div class="input-group">
                   <input type="text" name="message" placeholder="Type Message ..." class="form-control" id="query">
                       <span class="input-group-btn">
-                        <button onclick="getResponse();" class="btn btn-primary btn-flat">Send</button>
+                        <button onclick="getResponse();" class="btn btn-primary btn-flat" id="sendBtn">Send</button>
                       </span>
                 </div>
             </div>
@@ -226,6 +232,11 @@ var w = $(window).width();
 <!-- ChatBox End-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
+$(document).keyup(function(event) {
+    if ($("#query").is(":focus") && event.key == "Enter") {
+        $("#sendBtn").click();
+    }
+});
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -242,7 +253,8 @@ function getResponse(){
 	var query = $("#query").val();
 	if(query.trim()=="") return false;    //Do nothing if trying to getResponse without entering anything
 	var csrftoken = $('[name="csrfmiddlewaretoken"]').val();
-	$('#conversation').append('<div class="direct-chat-msg right"><div class="direct-chat-info clearfix"><span class="direct-chat-name pull-right">Oormila</span><span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span></div><img class="direct-chat-img" src="{% static "img/user.svg" %}" alt="Message User Image"><div class="direct-chat-text">'+query+'</div></div>');  //append user's message
+	$('#conversation').append('<div class="direct-chat-msg right"><div class="direct-chat-info clearfix"><span class="direct-chat-name pull-right">You</span></div><img class="direct-chat-img" src="{% static "img/user.svg" %}" alt="Message User Image"><div class="direct-chat-text">'+query+'</div></div>');  
+	$("#convBox").scrollTop($("#convBox")[0].scrollHeight);//append user's message
 	var dataObj = {
             'q' : query,
             'csrfmiddlewaretoken':csrftoken,
@@ -252,15 +264,21 @@ function getResponse(){
           url: "{% url 'get_reply' %}",
           data: dataObj,
           dataType: 'json',
+          beforeSend: function() {
+    		document.getElementById("loading").style.display = "block";
+    		$("#convBox").scrollTop($("#convBox")[0].scrollHeight);
+  		  },
           success: function( data ) {
             //alert(data);
-            $('#conversation').append('<div class="direct-chat-msg"><div class="direct-chat-info clearfix"><span class="direct-chat-name pull-left">ChatBot</span><span class="direct-chat-timestamp pull-right">23 Jan 2:05 pm</span></div><img class="direct-chat-img" src="{% static "images/bot.jpeg" %}" alt="Message User Image"><div class="direct-chat-text">'+data.reply+'</div></div>');
-            $("#conversation").scrollTop($("#conversation")[0].scrollHeight);    //append chatbot's reply for success
+            $('#conversation').append('<div class="direct-chat-msg"><div class="direct-chat-info clearfix"><span class="direct-chat-name pull-left">Chatty</span></div><img class="direct-chat-img" src="{% static "images/bot.jpeg" %}" alt="Message User Image"><div class="direct-chat-text">'+data.reply+'</div></div>');
+            $("#convBox").scrollTop($("#convBox")[0].scrollHeight);    //append chatbot's reply for success
+            document.getElementById("loading").style.display = "none";
           },
           error: function(data){
           	console.log(data);
-          	$('#conversation').append('<div class="direct-chat-msg"><div class="direct-chat-info clearfix"><span class="direct-chat-name pull-left">ChatBot</span><span class="direct-chat-timestamp pull-right">23 Jan 2:05 pm</span></div><img class="direct-chat-img" src="{% static "images/bot.jpeg" %}" alt="Message User Image"><div class="direct-chat-text">Cannot Connect right now!</div></div>');
-          	$("#conversation").scrollTop($("#conversation")[0].scrollHeight); //append chatbot's reply for failure
+          	$('#conversation').append('<div class="direct-chat-msg"><div class="direct-chat-info clearfix"><span class="direct-chat-name pull-left">Chatty</span></div><img class="direct-chat-img" src="{% static "images/bot.jpeg" %}" alt="Message User Image"><div class="direct-chat-text">Cannot Connect right now!</div></div>');
+          	$("#convBox").scrollTop($("#convBox")[0].scrollHeight); //append chatbot's reply for failure
+          	document.getElementById("loading").style.display = "none";
           }
         });
         

@@ -14,7 +14,8 @@ chatbot = ChatBot(
             'default_response': 'I am sorry, but I do not understand.',
             'maximum_similarity_threshold': 0.90
         }
-    ]
+    ],
+    database_uri='sqlite:///database.sqlite3'
 )
 trainer = ListTrainer(chatbot)
 trainer.train([

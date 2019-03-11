@@ -70,3 +70,15 @@
 .fa { 
 	font-family: 'FontAwesome' !important; 
 }
+
+.loading{
+	display: none;
+	text-align: left;
+	vertical-align: baseline;
+}
+
+.direct-chat-loading {
+	border-radius: 50%;
+	width: 90px;
+	height: 30px;
+}
