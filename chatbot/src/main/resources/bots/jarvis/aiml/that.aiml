@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<category><pattern>MTECH CSE</pattern><that>MTECH CSE OR ECE</that>
+<template><srai>areas of specialization for Mtech ECE</srai></template>
+</category>
+<category><pattern>MTECH ECE</pattern><that>MTECH CSE OR ECE</that>
+<template><srai>areas of specialization for Mtech ECE</srai></template>
+</category>
+<category><pattern>MASTERS THESIS</pattern><that>DURATION OF WHICH OF THE FOLLOWING *</that>
+<template><srai>duration of Mtech thesis</srai></template>
+</category>
+<category><pattern>MTECH PROGRAM</pattern><that>DURATION OF WHICH OF THE FOLLOWING *</that>
+<template><srai>duration of IMtech Program</srai></template>
+</category>
+<category><pattern>MSC DIGITAL SOCIETY ^</pattern><that>DURATION OF WHICH OF THE FOLLOWING *</that>
+<template><srai>duration of MSc Digital Society</srai></template>
+</category>
+<category><pattern>MASTER OF SCIENCE BY RESEARCH ^</pattern><that>DURATION OF WHICH OF THE FOLLOWING *</that>
+<template><srai>duration of Master of Science by Research</srai></template>
+</category>
+<category><pattern>DOCTOR OF PHILOSOPHY(PHD) ^</pattern><that>DURATION OF WHICH OF THE FOLLOWING *</that>
+<template><srai>duration of Doctor of Philosophy(PhD)</srai></template>
+</category>
+<category><pattern>IMTECH PROGRAM ^</pattern><that>DURATION OF WHICH OF THE FOLLOWING *</that>
+<template><srai>duration of IMTech program</srai></template>
+</category>
+<category><pattern>MTECH PROGRAM</pattern><that>ELIGIBILITY CRITERIA FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Eligibility criteria for MTech program</srai></template>
+</category>
+<category><pattern>MS PROGRAM</pattern><that>ELIGIBILITY CRITERIA FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Eligibility criteria for MS program</srai></template>
+</category>
+<category><pattern>IMTECH CSE PROGRAM</pattern><that>ELIGIBILITY CRITERIA FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Eligibility criteria for IMTech CSE program</srai></template>
+</category>
+<category><pattern>IMTECH ECE PROGRAM</pattern><that>ELIGIBILITY CRITERIA FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Eligibility criteria for IMTech ECE program</srai></template>
+</category>
+<category><pattern>MSC DIGITAL SOCIETY PROGRAM</pattern><that>ELIGIBILITY CRITERIA FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Eligibility criteria for MSc Digital Society program</srai></template>
+</category>
+<category><pattern>PHD PROGRAM</pattern><that>ELIGIBILITY CRITERIA FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Eligibility criteria for PhD program</srai></template>
+</category>
+<category><pattern>MTECH CSE ^</pattern><that>CUTOFF FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>cutoff for Mtech CSE</srai></template>
+</category>
+<category><pattern>MTECH ECE ^</pattern><that>CUTOFF FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>cutoff for Mtech ECE</srai></template>
+</category>
+<category><pattern>MTECH CSE ^</pattern><that>SEATS AVAILABILITY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Seats available for Mtech CSE</srai></template>
+</category>
+<category><pattern>MTECH ECE ^</pattern><that>SEATS AVAILABILITY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Seats available for Mtech ECE</srai></template>
+</category>
+<category><pattern>IMTECH CSE ^</pattern><that>SEATS AVAILABILITY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Seats available for IMtech CSE</srai></template>
+</category>
+<category><pattern>IMTECH ECE ^</pattern><that>SEATS AVAILABILITY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Seats available for IMtech ECE</srai></template>
+</category>
+<category><pattern>MSC DIGITAL SOCIETY ^</pattern><that>SEATS AVAILABILITY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Seats available for MSc Digital Society</srai></template>
+</category>
+<category><pattern>MASTER OF SCIENCE BY RESEARCH ^</pattern><that>SEATS AVAILABILITY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Seats available for Master of Science by Research</srai></template>
+</category>
+<category><pattern>DOCTOR OF PHILOSOPHY ^</pattern><that>SEATS AVAILABILITY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>Seats available for Doctor of Philosophy</srai></template>
+</category>
+<category><pattern>MTECH ^</pattern><that>FEES FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>fees for Mtech program</srai></template>
+</category>
+<category><pattern>MSC DIGITAL SOCIETY ^</pattern><that>FEES FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>fees for MSc Digital Society</srai></template>
+</category>
+<category><pattern>MS ^</pattern><that>FEES FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>fees for MS</srai></template>
+</category>
+<category><pattern>PHD ^</pattern><that>FEES FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>fees for PhD</srai></template>
+</category>
+<category><pattern>IMTECH ^</pattern><that>FEES FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>fees for IMtech program</srai></template>
+</category>
+<category><pattern>IMTECH ^</pattern><that>APPLY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>How to apply for IMtech </srai></template>
+</category>
+<category><pattern>MTECH ^</pattern><that>APPLY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>How to apply for Mtech </srai></template>
+</category>
+<category><pattern>MSC DIGITAL SOCIETY ^</pattern><that>APPLY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>How to apply for MSc Digital Society</srai></template>
+</category>
+<category><pattern>PHD ^</pattern><that>APPLY FOR WHICH OF THE FOLLOWING *</that>
+<template><srai>How to apply for PhD</srai></template>
+</category>
+</aiml>

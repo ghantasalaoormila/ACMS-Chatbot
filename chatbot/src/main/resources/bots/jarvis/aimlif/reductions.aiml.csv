@@ -1,0 +1,24 @@
+0,WHAT *,*,*,<srai><star/></srai>,reductions.aiml
+0,* FOR EACH SEMESTER,*,*,<srai><star/></srai>,reductions.aiml
+0,HOW MANY *,*,*,<srai><star/></srai>,reductions.aiml
+0,^ CREDIT DISTRIBUTIONS ^,*,*,<srai>^ CREDIT DISTRIBUTION ^</srai>,reductions.aiml
+0,* ELECTIVES * STUDENT ^,*,*,<srai>How many electives have to be completed by each student</srai>,reductions.aiml
+0,* ELECTIVES * FOR SPECIALIZATION DEGREE ^,*,*,<srai>How many electives under a particular specialization have to be completed for specialization degree</srai>,reductions.aiml
+0,* PROJECT ELECTIVES * ALLOWED * SEMESTER ^,*,*,<srai>How many Project Elective or Research Elective courses are allowed to be opted per semester</srai>,reductions.aiml
+0,* ALLOWED * PROJECT ELECTIVES * SEMESTER ^,*,*,<srai>How many Project Elective or Research Elective courses are allowed to be opted per semester</srai>,reductions.aiml
+0,* RESEARCH ELECTIVES * ALLOWED * SEMESTER ^,*,*,<srai>How many Project Elective or Research Elective courses are allowed to be opted per semester</srai>,reductions.aiml
+0,* ALLOWED * RESEARCH ELECTIVES * SEMESTER ^,*,*,<srai>How many Project Elective or Research Elective courses are allowed to be opted per semester</srai>,reductions.aiml
+0,^ DURATION OF A PROGRAM ^,*,*,<srai>What is the duration</srai>,reductions.aiml
+0,^ OFFERED PROGRAMS ^,*,*,<srai>programs offered</srai>,reductions.aiml
+0,^ PROGRAMS ^ OFFERED ^,*,*,<srai>programs offered</srai>,reductions.aiml
+0,^ BRANCHES ^ AVAILABLE ^,*,*,<srai>available branches</srai>,reductions.aiml
+0,^ BRANCHES ^ OFFERED ^,*,*,<srai>available branches</srai>,reductions.aiml
+0,^ AVAILABLE ^ BRANCHES ^,*,*,<srai>available branches</srai>,reductions.aiml
+0,WHAT ARE THE *,*,*,<srai><star/></srai>,reductions.aiml
+0,^ ELIGIBILITY CRITERIA,*,*,<srai>What is the eligibility criteria</srai>,reductions.aiml
+0,WHAT * CUTOFF,*,*,<srai>What was the cutOff?</srai>,reductions.aiml
+0,^ FEE STRUCTURE FOR ^,*,*,<srai>fees for <star index="2"/></srai>,reductions.aiml
+0,^ FEE STRUCTURE ^,*,*,<srai>How much fees</srai>,reductions.aiml
+0,^ HOW MUCH ^ FEES FOR ^,*,*,<srai>fees for <star index="3"/></srai>,reductions.aiml
+0,^ PLACEMENT ^,*,*,<srai>Placement Statistics</srai>,reductions.aiml
+0,^ PLACEMENTS ^,*,*,<srai>Placement Statistics</srai>,reductions.aiml

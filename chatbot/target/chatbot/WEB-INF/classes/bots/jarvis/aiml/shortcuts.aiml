@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<category><pattern>^ RE ^</pattern>
+<template><srai><star index="1"/> Research Electives <star index="2"/></srai></template>
+</category>
+<category><pattern>^ PE ^</pattern>
+<template><srai><star index="1"/> Project Electives <star index="2"/></srai></template>
+</category>
+<category><pattern>^ SEM ^</pattern>
+<template><srai><star index="1"/> semester <star index="2"/></srai></template>
+</category>
+<category><pattern>^ DIGISOC ^</pattern>
+<template><srai><star index="1"/> digital society <star index="2"/></srai></template>
+</category>
+</aiml>

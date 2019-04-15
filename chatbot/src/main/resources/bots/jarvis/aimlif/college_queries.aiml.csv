@@ -1,0 +1,48 @@
+0,^ CREDIT DISTRIBUTION ^,*,*,16 credits.,college_queries.aiml
+0,^ DURATION ^ SEMESTER ^,*,*,6 months.,college_queries.aiml
+0,^ AREAS OF SPECIALIZATION,*,*,Mtech CSE or Mtech ECE?,college_queries.aiml
+0,^ AREAS OF SPECIALIZATION FOR MTECH CSE,*,*,Theory and Systems#Comma Networking and communication#Comma Data Science#Comma Signal Processing and Pattern Recognition.,college_queries.aiml
+0,^ AREAS OF SPECIALIZATION FOR MTECH ECE,*,*,VLSI Systems#Comma Networking and communication#Comma Data Science#Comma Signal Processing and Pattern Recognition.,college_queries.aiml
+0,HOW MANY ELECTIVES HAVE TO BE COMPLETED BY EACH STUDENT,*,*,5 electives have to be completed by each student.,college_queries.aiml
+0,HOW MANY ELECTIVES UNDER A PARTICULAR SPECIALIZATION HAVE TO BE COMPLETED FOR SPECIALIZATION DEGREE ^,*,*,5 electives have to be completed.,college_queries.aiml
+0,HOW MANY PROJECT ELECTIVE OR RESEARCH ELECTIVE COURSES ARE ALLOWED TO BE OPTED PER SEMESTER ^,*,*,1 Project Elective or Research Elective,college_queries.aiml
+0,WHAT IS THE DURATION,*,*,Duration of which of the following Masters thesis#Comma Mtech program#Comma MSc Digital Society program#Comma Master of Science by Research program#Comma Doctor of Philosophy(PhD) program#Comma IMTech program?,college_queries.aiml
+0,^ DURATION OF MTECH THESIS ^,*,*,24 weeks,college_queries.aiml
+0,^ DURATION OF MTECH PROGRAM ^,*,*,2 years,college_queries.aiml
+0,^ DURATION OF MSC DIGITAL SOCIETY ^,*,*,2 years,college_queries.aiml
+0,^ DURATION OF MASTER OF SCIENCE BY RESEARCH ^,*,*,3-5 years,college_queries.aiml
+0,^ DURATION OF DOCTOR OF PHILOSOPHY(PHD) ^,*,*,5-7 years,college_queries.aiml
+0,^ DURATION OF IMTECH PROGRAM ^,*,*,5 years,college_queries.aiml
+0,CREDITS * THESIS,*,*,20 credits,college_queries.aiml
+0,PROGRAMS OFFERED,*,*,The Institute offers MS#Comma M.Tech#Comma Integrated MTech programs and Ph.D.,college_queries.aiml
+0,AVAILABLE BRANCHES,*,*,Computer Science and Engineering#CommaElectronics and Communication Engineering and Digital Society.,college_queries.aiml
+0,# PART TIME PROGRAM #,*,*,Institute only offers part time PhD program.,college_queries.aiml
+0,WHAT IS THE ELIGIBILITY CRITERIA,*,*,Eligibility criteria for which of the following Mtech program#Comma MS program#Comma IMTech CSE program#Comma IMTech ECE program#Comma MSc Digital Society program#Comma PhD program?,college_queries.aiml
+0,^ ELIGIBILITY CRITERIA * MTECH PROGRAM ^,*,*,For CSE the gate score should be above 640 and for ECE above 600.,college_queries.aiml
+0,^ ELIGIBILITY CRITERIA * MS PROGRAM ^,*,*,Candidates are shortlisted based on GATE Scores and called for interviews.,college_queries.aiml
+0,^ ELIGIBILITY CRITERIA * IMTECH CSE PROGRAM ^,*,*,JEE-Main score should be 182 or above.,college_queries.aiml
+0,^ ELIGIBILITY CRITERIA * IMTECH ECE PROGRAM ^,*,*,JEE-Main score should be 170 or above.,college_queries.aiml
+0,^ ELIGIBILITY CRITERIA * MSC DIGITAL SOCIETY PROGRAM ^,*,*,An under-graduate degree (of at least 3 years duration) in any discipline (including arts#Comma science#Comma commerce#Comma design#Comma management#Comma law#Comma engineering etc.) with a first division/class from a recognised University. The candidates who have a valid score in CAT#Comma CEED #Comma CUCET or TISS NET  may be exempted from appearing for a written test at IIIT Bangalore.,college_queries.aiml
+0,^ ELIGIBILITY CRITERIA * PHD PROGRAM ^,*,*,Currently for admission to the programme#Comma a masters degree in engineering (an M.S. by Research/M.Sc.(Research)#Comma or M. Tech.#Comma M.E.#Comma or equivalent) is the minimal requirement.,college_queries.aiml
+0,WHAT WAS THE CUTOFF?,*,*,Cutoff for which of the following Mtech CSE#Comma MTech ECE last year.,college_queries.aiml
+0,^ CUTOFF FOR MTECH CSE ^,*,*,A gate score of 640.,college_queries.aiml
+0,^ CUTOFF FOR MTECH ECE ^,*,*,A gate score of 600.,college_queries.aiml
+0,^ SEATS ^ AVAILABLE ^,*,*,Seats availability for which of the following MTech CSE#Comma MTech ECE#Comma IMTech CSE#Comma IMTech ECE#Comma MSc Digital Society#Comma Master of Science by Research#Comma Doctor of Philosophy program?,college_queries.aiml
+0,^ SEATS ^ AVAILABLE FOR MTECH CSE ^,*,*,Approximately 150 seats.,college_queries.aiml
+0,^ SEATS ^ AVAILABLE FOR MTECH ECE ^,*,*,Approximately 30 seats.,college_queries.aiml
+0,^ SEATS ^ AVAILABLE FOR IMTECH CSE ^,*,*,Approximately 60 seats.,college_queries.aiml
+0,^ SEATS ^ AVAILABLE FOR  MSC DIGITAL SOCIETY ^,*,*,Approximately 20 seats.,college_queries.aiml
+0,^ SEATS ^ AVAILABLE FOR MASTER OF SCIENCE BY RESEARCH ^,*,*,Approximately 35 seats.,college_queries.aiml
+0,^ SEATS ^ AVAILABLE FOR DOCTOR OF PHILOSOPHY ^,*,*,Approximately 72 seats.,college_queries.aiml
+0,^ HOW MUCH ^ FEES ^,*,*,Fees for which of the following Mtech program#Comma MSc Digital Society#Comma IMtech#Comma MS#Comma PhD program,college_queries.aiml
+0,^ FEES FOR MTECH PROGRAM ^,*,*,Rs.5#Comma36#Comma000. Per semester - Rs.1#Comma34#Comma000. Along with this#Comma the student has to pay  per semester Rs.24#Comma000 and Rs.33#Comma000 for mess and hostel facilities respectively.,college_queries.aiml
+0,^ FEES FOR MSC DIGITAL SOCIETY ^,*,*,Rs.5#Comma36#Comma000. Per semester - Rs.1#Comma34#Comma000. Along with this#Comma the student has to pay  per semester Rs.24#Comma000 and Rs.33#Comma000 for mess and hostel facilities respectively.,college_queries.aiml
+0,^ FEES FOR IMTECH PROGRAM ^,*,*,First and Second year - Rs.1#Comma34#Comma000 per semester.#NewlineThird and Fourth year - Rs.1#Comma60#Comma000 per semester.#NewlineFifth year - Rs.1#Comma92#Comma000 per semester.Along with this#Comma the student has to pay  per semester Rs.24#Comma000 and Rs.33#Comma000 for mess and hostel facilities respectively.,college_queries.aiml
+0,^ FEES FOR MS ^,*,*,The fees for MS students is Rs.45000 per semester.Along with this#Comma the student has to pay  per semester Rs.24#Comma000 and Rs.33#Comma000 for mess and hostel facilities respectively.,college_queries.aiml
+0,^ FEES FOR PHD ^,*,*,The fees for MS students is Rs.45000 per semester.Along with this#Comma the student has to pay  per semester Rs.24#Comma000 and Rs.33#Comma000 for mess and hostel facilities respectively.,college_queries.aiml
+0,^ HOW TO APPLY ^,*,*,Apply for which of the following MSc Digital Society#Comma M.Tech#Comma IMTech#Comma PhD,college_queries.aiml
+0,^ HOW TO APPLY FOR MSC DIGITAL SOCIETY ^,*,*,Please follow this <a href="https://pravesh.iiitb.ac.in/#/">link</a>,college_queries.aiml
+0,^ HOW TO APPLY FOR MTECH ^,*,*,Please follow this <a href="https://www.iiitb.ac.in/admission_research.php?pid=mtech-cse-admissions&amp;class=How-to-Apply4">link</a>,college_queries.aiml
+0,^ HOW TO APPLY FOR IMTECH ^,*,*,Please follow this <a href="https://www.iiitb.ac.in/admission_research.php?pid=integrated-mtech&amp;class=How-to-Apply4">link</a>,college_queries.aiml
+0,^ HOW TO APPLY FOR PHD ^,*,*,Please follow this <a href="https://pravesh.iiitb.ac.in/#/">link</a>,college_queries.aiml
+0,^ PLACEMENT STATISTICS ^,*,*,For more info on Placement statistics follow this <a href="https://www.iiitb.ac.in/placement_stats.php">link</a>,college_queries.aiml

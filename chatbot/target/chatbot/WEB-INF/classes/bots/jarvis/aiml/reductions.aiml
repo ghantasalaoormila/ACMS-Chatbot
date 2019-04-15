@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<category><pattern>WHAT *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>* FOR EACH SEMESTER</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>HOW MANY *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>^ CREDIT DISTRIBUTIONS ^</pattern>
+<template><srai>^ CREDIT DISTRIBUTION ^</srai></template>
+</category>
+<category><pattern>* ELECTIVES * STUDENT ^</pattern>
+<template><srai>How many electives have to be completed by each student</srai></template>
+</category>
+<category><pattern>* ELECTIVES * FOR SPECIALIZATION DEGREE ^</pattern>
+<template><srai>How many electives under a particular specialization have to be completed for specialization degree</srai></template>
+</category>
+<category><pattern>* PROJECT ELECTIVES * ALLOWED * SEMESTER ^</pattern>
+<template><srai>How many Project Elective or Research Elective courses are allowed to be opted per semester</srai></template>
+</category>
+<category><pattern>* ALLOWED * PROJECT ELECTIVES * SEMESTER ^</pattern>
+<template><srai>How many Project Elective or Research Elective courses are allowed to be opted per semester</srai></template>
+</category>
+<category><pattern>* RESEARCH ELECTIVES * ALLOWED * SEMESTER ^</pattern>
+<template><srai>How many Project Elective or Research Elective courses are allowed to be opted per semester</srai></template>
+</category>
+<category><pattern>* ALLOWED * RESEARCH ELECTIVES * SEMESTER ^</pattern>
+<template><srai>How many Project Elective or Research Elective courses are allowed to be opted per semester</srai></template>
+</category>
+<category><pattern>^ DURATION OF A PROGRAM ^</pattern>
+<template><srai>What is the duration</srai></template>
+</category>
+<category><pattern>^ OFFERED PROGRAMS ^</pattern>
+<template><srai>programs offered</srai></template>
+</category>
+<category><pattern>^ PROGRAMS ^ OFFERED ^</pattern>
+<template><srai>programs offered</srai></template>
+</category>
+<category><pattern>^ BRANCHES ^ AVAILABLE ^</pattern>
+<template><srai>available branches</srai></template>
+</category>
+<category><pattern>^ BRANCHES ^ OFFERED ^</pattern>
+<template><srai>available branches</srai></template>
+</category>
+<category><pattern>^ AVAILABLE ^ BRANCHES ^</pattern>
+<template><srai>available branches</srai></template>
+</category>
+<category><pattern>WHAT ARE THE *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>^ ELIGIBILITY CRITERIA</pattern>
+<template><srai>What is the eligibility criteria</srai></template>
+</category>
+<category><pattern>WHAT * CUTOFF</pattern>
+<template><srai>What was the cutOff?</srai></template>
+</category>
+<category><pattern>^ FEE STRUCTURE FOR ^</pattern>
+<template><srai>fees for <star index="2"/></srai></template>
+</category>
+<category><pattern>^ FEE STRUCTURE ^</pattern>
+<template><srai>How much fees</srai></template>
+</category>
+<category><pattern>^ HOW MUCH ^ FEES FOR ^</pattern>
+<template><srai>fees for <star index="3"/></srai></template>
+</category>
+<category><pattern>^ PLACEMENT ^</pattern>
+<template><srai>Placement Statistics</srai></template>
+</category>
+<category><pattern>^ PLACEMENTS ^</pattern>
+<template><srai>Placement Statistics</srai></template>
+</category>
+</aiml>
